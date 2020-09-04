@@ -3,15 +3,18 @@
 
 <h1>Hello {{name}} !!!!!, This is test page.</h1>
 
-<form action="add">
-   <div class="text-center">
-      
+<form action="add" method="POST">
+{% csrf_token %}
+
+
+   <div class="">
          Enter first Number : <input type="text" name="num1">
-      
-         Enter second Number : <input type="text" name="num2">
-      <div>
-         <input type="submit" value="Submit">
-      </div>
+   </div>
+   <div>
+      Enter second Number : <input type="text" name="num2">
+   </div>
+   <div>
+      <input type="submit" value="Submit">
    </div>
 </form>
    
